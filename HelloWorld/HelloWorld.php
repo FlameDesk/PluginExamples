@@ -7,7 +7,7 @@ class HelloWorld
 		//Information about the plugin
 		$HelloWorld["name"] = "HelloWorld";
 		$HelloWorld["author"] = "Kenneth";
-		$HelloWorld["website"] = "https://github.com/FlameDesk/ExamplePlugins";
+		$HelloWorld["website"] = "http://github.com/FlameDesk/PluginExamples/";
 	}
 	public function Activate()
 	{
@@ -23,7 +23,7 @@ class HelloWorld
 		//Removes HelloWorld template
 		$flamedesk->template["helloworld"]->remove();
 		//searches and replaces in the header
-		$flamedesk->template["helloworld"]->replace("{$flamedesk->template[\"helloworld\"]}", "");
+		$flamedesk->template["header"]->replace("{$flamedesk->template[\"helloworld\"]}", "");
 	}
 }
 ?>
